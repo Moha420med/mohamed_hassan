@@ -1,0 +1,1101 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags: Important information for search engines -->
+    <!-- This page is designed to be fully SEO-optimized, incorporating all necessary meta tags directly within index.html,
+         thus fulfilling the request for an "seo-page.html" connection without creating a separate file or link. -->
+    <title>Mohamed Hassan | Penetration Tester & Network Security student</title>
+    <meta name="description" content="Mohamed Hassan's portfolio – Junior Penetration Tester, Network Security student and Freelance Bug Hunter from Egypt.">
+    <meta name="keywords" content="Mohamed Hassan Mohamed Eltaweel, Mohamed Hassan, Cybersecurity Egypt, Bug Hunter, Linux Egypt, Junior Pen Tester, Penetration Testing ,Salla, Network Security, Ethical Hacking">
+    <meta name="author" content="Mohamed Hassan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mohamed-hassan.com/">
+    
+    <!-- Open Graph Meta Tags: For social media sharing -->
+    <meta property="og:title" content="Mohamed Hassan | Junior Penetration Tester & Network Security Specialist">
+    <meta property="og:description" content="Junior Penetration Tester , Bug Hunter , and Network Administrator from Egypt.">
+    <meta property="og:image" content="/placeholder.svg?height=630&width=1200"> <!-- Placeholder for 0.png -->
+    <meta property="og:url" content="https://mohamed-hassan.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohamed_Hassan | Junior Penetration Tester">
+    <meta name="twitter:description" content="Junior Penetration Tester, Bug Hunter, Ethical Hacker and Network Security Guy from Egypt.">
+    <meta name="twitter:image" content="/placeholder.svg?height=630&width=1200"> <!-- Placeholder for 0.png -->
+    
+    <!-- Favicon: Site icon in the browser tab -->
+    <link rel="icon" type="image/png" href="/home/mohamed/my port/kmc_20250810_181547.png"> <!-- Placeholder for 0.png -->
+    
+    <!-- Tailwind CSS CDN: To add Tailwind CSS classes directly -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons: To add professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library: For scroll animations (lightweight) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- GSAP Animation Library: For more complex animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Styles: Custom styles including gradients and effects -->
+    <style>
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        /* Base Styles Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', 'Cairo', sans-serif; overflow-x: hidden; } /* Poppins for English, Cairo for Arabic fallback */
+        
+        /* General Gradient Colors */
+        .text-gradient {
+            background: linear-gradient(90deg, #f87171 0%, #fb923c 100%); /* Red and Orange */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animated Background Styles */
+        .background-animated-element {
+            position: absolute;
+            opacity: 0.05; /* Very transparent */
+            pointer-events: none; /* Ensure no interaction */
+            transform-origin: center center;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            z-index: 0;
+        }
+
+        /* Animation Keyframes for Background */
+        @keyframes rotateFloat {
+            0% { transform: translate(0, 0) rotate(0deg) scale(0.8); }
+            25% { transform: translate(20px, 30px) rotate(90deg) scale(1); }
+            50% { transform: translate(0, 60px) rotate(180deg) scale(0.9); }
+            75% { transform: translate(-20px, 30px) rotate(270deg) scale(1.1); }
+            100% { transform: translate(0, 0) rotate(360deg) scale(0.8); }
+        }
+        .background-animated-element.type-network { animation-name: rotateFloat; }
+        .background-animated-element.type-cyber { animation-name: rotateFloat; }
+        .background-animated-element.type-code { animation-name: rotateFloat; }
+
+        /* Terminal Styles */
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background-color: #4ade80; /* Green */
+            animation: blink-terminal-cursor 0.7s step-end infinite;
+        }
+        @keyframes blink-terminal-cursor {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Skill Progress Bar Styles */
+        .skill-progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            transform-origin: left; /* For LTR */
+            transform: scaleX(0);
+            transition: transform 1s ease-out;
+        }
+        .skill-progress-bar.animate {
+            transform: scaleX(1);
+        }
+
+        /* Hide Mobile Menu by default */
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Make Navbar more transparent when not scrolled */
+        nav.scrolled {
+            background-color: rgba(59, 63, 75, 0.98); /* Darker transparent gray */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-orange-400 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
+                        <img src="/home/mohamed/my port/kmc_20250810_181547.png" alt="Mohamed Hassan Logo" class="w-6 h-6 text-white" /> <!-- Placeholder for 0.png -->
+                    </div>
+                    <span class="text-xl font-bold">Mohamed Hassan</span>
+                </a>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors relative py-2 nav-link" data-section="home">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors relative py-2 nav-link" data-section="about">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors relative py-2 nav-link" data-section="skills">Skills</a>
+                    <a href="#certificates" class="text-gray-300 hover:text-white transition-colors relative py-2 nav-link" data-section="certificates">Certificates</a>
+                    <a href="#photos" class="text-gray-300 hover:text-white transition-colors relative py-2 nav-link" data-section="photos">Photos</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors relative py-2 nav-link" data-section="contact">Contact</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-gray-900/98 backdrop-blur-md hidden md:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="text-2xl text-gray-300 hover:text-white transition-colors mobile-menu-link" data-section="home">Home</a>
+        <a href="#about" class="text-2xl text-gray-300 hover:text-white transition-colors mobile-menu-link" data-section="about">About</a>
+        <a href="#skills" class="text-2xl text-gray-300 hover:text-white transition-colors mobile-menu-link" data-section="skills">Skills</a>
+        <a href="#certificates" class="text-2xl text-gray-300 hover:text-white transition-colors mobile-menu-link" data-section="certificates">Certificates</a>
+        <a href="#photos" class="text-2xl text-gray-300 hover:text-white transition-colors mobile-menu-link" data-section="photos">Photos</a>
+        <a href="#contact" class="text-2xl text-gray-300 hover:text-white transition-colors mobile-menu-link" data-section="contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black pt-20">
+        <!-- Animated Network Background -->
+        <div class="background-animation-container absolute inset-0"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Left Side - Profile -->
+            <div class="text-center md:text-left" data-aos="fade-right" data-aos-duration="800">
+                <!-- Profile Image: Moved away from header with pt-20 in section -->
+                <div class="w-40 h-50 mx-auto md:mx-0 mb-8 rounded-2xl bg-gradient-to-r from-blue-500 to-orange-500 p-1 transform hover:rotate-6 transition-transform duration-300">
+                    <img src="/home/mohamed/my port/kmc_20251111_162944.png" alt="Mohamed Hassan Profile" class="w-full h-full rounded-2xl bg-gray-800 object-cover" /> <!-- Placeholder for 0.png -->
+                </div>
+
+                <h1 class="text-5xl md:text-6xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                        Mohamed Hassan
+                    </span>
+                </h1>
+
+                <div class="text-2xl mb-6" data-aos="fade-up" data-aos-delay="400">
+                    <span class="bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text text-transparent font-semibold">
+                        Penetration Tester
+                    </span>
+                    <br>
+                    <span class="text-gray-400">& Network Security Specialist</span>
+                </div>
+
+                <p class="text-gray-400 mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="600">
+                    Junior penetration tester, Bug Hunter, and Network security Specialist. Specialized in penetration testing, Bug Hunting, and Network security.
+                </p>
+
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start" data-aos="fade-up" data-aos-delay="800">
+                    <a href="#contact" class="bg-gradient-to-r from-blue-500 to-orange-500 px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-hand-sparkles w-5 h-5"></i>
+                        <span>Contact Me</span>
+                    </a>
+                    <a href="#certificates" class="border border-gray-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 flex items-center space-x-2 transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-eye w-5 h-5"></i>
+                        <span>My Certificates</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side - Terminal -->
+            <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden shadow-lg" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                <div class="bg-gray-700 px-4 py-2 flex items-center space-x-2">
+                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span class="text-sm text-gray-400 ml-4">Terminal</span>
+                </div>
+                <div class="p-4 h-80 overflow-hidden">
+                    <pre id="terminal-output" class="text-green-400 text-sm font-mono whitespace-pre-wrap"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-400 text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-gray-900 relative">
+        <!-- Animated Cybersecurity Background -->
+        <div class="background-animation-container type-cyber absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    About Me
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-lg bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-crosshairs text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Red Teaming</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Junior Penetration Tester with eJPT certification , eJPT v2 diploma and Red Teaming & Ethical Hacking Diploma from Red Nexus, possessing practical experience in penetration testing and ethical hacking.
+                    </p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-network-wired text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Network Security</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Certified in CCNA 200-301 from Cisco, specializing in secure network design and firewall configuration (UFW/pfSense). Experience in traffic analysis using Wireshark and countering threats like DDoS and MITM in lab environments.
+                    </p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bug text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Bug Hunter</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Holder of a diploma in Advanced Bug Bounty Secrets & Web Pentesting, specialized in detecting web vulnerabilities such as SQL injection, XSS, and others. Currently a student at Delta Technological University.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                <div class="text-center bg-gray-800/30 p-6 rounded-lg border border-gray-700 shadow-md transform hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl mb-2">🎂</div>
+                    <div class="text-3xl font-bold text-white mb-2">20</div>
+                    <div class="text-gray-400 text-sm">Years Old</div>
+                </div>
+                <div class="text-center bg-gray-800/30 p-6 rounded-lg border border-gray-700 shadow-md transform hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl mb-2">✅</div>
+                    <div class="text-3xl font-bold text-white mb-2">+100</div>
+                    <div class="text-gray-400 text-sm">Labs solved in Portswigger</div>
+                </div>
+                <div class="text-center bg-gray-800/30 p-6 rounded-lg border border-gray-700 shadow-md transform hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl mb-2">🏆</div>
+                    <div class="text-3xl font-bold text-white mb-2">+18</div>
+                    <div class="text-gray-400 text-sm">CTF Challenges Solved</div>
+                </div>
+                <div class="text-center bg-gray-800/30 p-6 rounded-lg border border-gray-700 shadow-md transform hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl mb-2">📝</div>
+                    <div class="text-3xl font-bold text-white mb-2">+9</div>
+                    <div class="text-gray-400 text-sm">Write-ups Published</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Photos Section -->
+    <section id="photos" class="py-20 bg-gray-900 relative">
+        <div class="background-animation-container type-code absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    My Photos
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="/home/mohamed/my port/WhatsApp Image 2025-11-11 at 6.32.55 PM.jpeg" alt="Mohamed Hassan Photo 1" class="w-full h-auto object-cover rounded-t-xl"> <!-- Placeholder for 1.jpg -->
+                    
+                </div>
+                <div class="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="/home/mohamed/my port/WhatsApp Image 2025-11-11 at 6.32.56 PM (1).jpeg" alt="Mohamed Hassan Photo 2" class="w-full h-auto object-cover rounded-t-xl"> <!-- Placeholder for 2.jpg -->
+                    
+                </div>
+                <div class="bg-gray-700/50 rounded-xl overflow-hidden border border-gray-700 shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="/home/mohamed/my port/WhatsApp Image 2025-11-11 at 6.32.56 PM.jpeg" alt="Mohamed Hassan Photo 3" class="w-full h-auto object-cover rounded-t-xl"> <!-- Placeholder for 3.jpg -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900 relative">
+        <!-- Animated Code Background -->
+        <div class="background-animation-container type-code absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    Technical Skills
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example: Penetration Testing -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-red-500 to-red-700 mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-crosshairs text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Penetration Testing</h3>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-progress-bar bg-gradient-to-r from-red-500 to-red-700" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-gray-300">Tools & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Nmap</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Metasploit</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Nessus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example: Network Security -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-network-wired text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Network Security</h3>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-progress-bar bg-gradient-to-r from-blue-500 to-blue-700" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-gray-300">Tools & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Wireshark</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">pfSense</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Snort</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example: Bug Bounty Hunting -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-700 mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-bug text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Bug Bounty Hunting</h3>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-progress-bar bg-gradient-to-r from-green-500 to-green-700" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-gray-300">Tools & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">FFUF</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Dirsearch</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">SubFinder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example: Red Teaming -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-700 mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-user-secret text-red text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Red Teaming</h3>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-progress-bar bg-gradient-to-r from-purple-500 to-purple-700" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-gray-300">Tools & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Cobalt Strike</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">BloodHood</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Power Shell Empire</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example: Web Pentesting -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-orange-500 to-orange-700 mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-globe text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Web Pentesting</h3>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-progress-bar bg-gradient-to-r from-orange-500 to-orange-700" data-width="94"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-gray-300">Tools & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">BurpSuite Pro</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Sqlmap</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Commix</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example: Threat Intelligence & Reporting -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all group shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-teal-500 to-teal-700 mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Threat Intelligence & Reporting</h3>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="skill-progress-bar bg-gradient-to-r from-teal-500 to-teal-700" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-gray-300">Tools & Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">MISP</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">Zeek</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">ELK Stack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-black relative">
+        <!-- Animated Cybersecurity Background -->
+        <div class="background-animation-container type-cyber absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    Professional Certificates
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- This is where you can add more certificates.
+                     هذا هو المكان الذي يمكنك فيه إضافة المزيد من الشهادات. -->
+                <!-- Example: Red teamind -->
+                <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all group relative overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-red-500 to-red-700 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-user-secret text-white text-3xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-red-500 to-red-700 text-white block mb-2">
+                                Professional
+                            </span>
+                            <span class="text-gray-400 text-sm">2025</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Red Teaming and Ethical Hacking Diploma</h3>
+                    <p class="text-gray-400 mb-6">Red Nexus</p>
+                    <button class="bg-gradient-to-r from-red-500 to-red-700 px-6 py-3 rounded-lg text-white font-semibold flex items-center space-x-2 group-hover:shadow-lg transition-all transform hover:scale-105 view-certificate-button"
+                            data-title="Red Teaming and Ethical Hacking Diploma"
+                            data-org="Red Teaming / Red Nexus-Eng.Hossam Shady"
+                            data-level="Professional"
+                            data-year="2025"
+                            data-image="/placeholder.svg?height=400&width=600"> <!-- Placeholder for certificate image -->
+                        <i class="fas fa-award w-5 h-5"></i>
+                        <span>View Certificate</span>
+                        <i class="fas fa-arrow-right w-4 h-4"></i>
+                    </button>
+                    <!-- Background pattern -->
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-5"><i class="fas fa-terminal w-full h-full text-white"></i></div>
+                </div>
+
+                <!-- Example: CCNA  -->
+                <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all group relative overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-network-wired text-white text-3xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-500 to-blue-700 text-white block mb-2">
+                                Advanced
+                            </span>
+                            <span class="text-gray-400 text-sm">2024</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">CCNA 200-301 Certificate</h3>
+                    <p class="text-gray-400 mb-6">Cisco - WE Telecom Egypt</p>
+                    <button class="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 rounded-lg text-white font-semibold flex items-center space-x-2 group-hover:shadow-lg transition-all transform hover:scale-105 view-certificate-button"
+                            data-title="CCNA 200-301 Certificate"
+                            data-org="Cisco - WE Telecom Egypt"
+                            data-level="Advanced"
+                            data-year="2024"
+                            data-image="/placeholder.svg?height=400&width=600"> <!-- Placeholder for certificate image -->
+                        <i class="fas fa-award w-5 h-5"></i>
+                        <span>View Certificate</span>
+                        <i class="fas fa-arrow-right w-4 h-4"></i>
+                    </button>
+                    <!-- Background pattern -->
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-5"><i class="fas fa-network-wired w-full h-full text-white"></i></div>
+                </div>
+
+                <!-- Example: Ejpt Cybersecurity -->
+                <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all group relative overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-purple-500 to-purple-700 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-lock text-white text-3xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-500 to-purple-700 text-white block mb-2">
+                                Expert
+                            </span>
+                            <span class="text-gray-400 text-sm">2026</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">eJPT Certificate & eJPTv2 Diploma</h3>
+                    <p class="text-gray-400 mb-6">INE Security - Red Nexus</p>
+                    <button class="bg-gradient-to-r from-purple-500 to-purple-700 px-6 py-3 rounded-lg text-white font-semibold flex items-center space-x-2 group-hover:shadow-lg transition-all transform hover:scale-105 view-certificate-button"
+                            data-title="eJPT Certificate & eJPTv2 Diploma"
+                            data-org="INE Security - Red Nexus"
+                            data-level="Expert"
+                            data-year="2026"
+                            data-image="/placeholder.svg?height=400&width=600"> <!-- Placeholder for certificate image -->
+                        <i class="fas fa-award w-5 h-5"></i>
+                        <span>View Certificate</span>
+                        <i class="fas fa-arrow-right w-4 h-4"></i>
+                    </button>
+                    <!-- Background pattern -->
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-5"><i class="fas fa-shield-alt w-full h-full text-white"></i></div>
+                </div>
+
+                <!-- Example: Bug Bounty -->
+                <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all group relative overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-orange-500 to-orange-700 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-bug text-white text-3xl"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-orange-500 to-orange-700 text-white block mb-2">
+                                Professional
+                            </span>
+                            <span class="text-gray-400 text-sm">2026</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Bug Bounty Secrets | Web Pentesting</h3>
+                    <p class="text-gray-400 mb-6">Red Nexus</p>
+                    <button class="bg-gradient-to-r from-orange-500 to-orange-700 px-6 py-3 rounded-lg text-white font-semibold flex items-center space-x-2 group-hover:shadow-lg transition-all transform hover:scale-105 view-certificate-button"
+                            data-title="Advanced Bug Bounty Secrets | Web Pentesting"
+                            data-org="Red Nexus"
+                            data-level="Professional"
+                            data-year="2026"
+                            data-image="/placeholder.svg?height=400&width=600"> <!-- Placeholder for certificate image -->
+                        <i class="fas fa-award w-5 h-5"></i>
+                        <span>View Certificate</span>
+                        <i class="fas fa-arrow-right w-4 h-4"></i>
+                    </button>
+                    <!-- Background pattern -->
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-5"><i class="fas fa-bug w-full h-full text-white"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-------------------------------------------------------------------------------->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black relative">
+        <!-- Animated Cybersecurity Background -->
+        <div class="background-animation-container type-cyber absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    Let's Chat About Hacking & Security
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-8" data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-white mb-6">Ready to Discuss Your Cyber Challenges?</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                         As a Junior Penetration Tester, Bug Hunter and Ethical Hacker, I offer insights on vulnerability assessments, bug bouty tips, and network optimization.Let`s chat about your project-I`m here to help or learn together!
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 group transform hover:translate-x-2 transition-transform">
+                            <div class="bg-gradient-to-r from-red-500 to-orange-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Email</h4>
+                                <p class="text-gray-400">eltaweel420@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 group transform hover:translate-x-2 transition-transform">
+                            <div class="bg-gradient-to-r from-green-500 to-teal-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Egypt</h4>
+                                <p class="text-gray-400">+20 1068015108</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 group transform hover:translate-x-2 transition-transform">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Egypt</h4>
+                                <p class="text-gray-400">+20 1211673906</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 group transform hover:translate-x-2 transition-transform">
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-map-marker-alt w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Location</h4>
+                                <p class="text-gray-400">Elshohada, Monufia, Egypt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 shadow-lg" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-white font-semibold mb-2">Name</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-red-500 focus:outline-none transition-colors" placeholder="Your Full Name">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-white font-semibold mb-2">Email</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-red-500 focus:outline-none transition-colors" placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-service" class="block text-white font-semibold mb-2">Service</label>
+                            <select id="contact-service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-red-500 focus:outline-none transition-colors">
+                                <option>Select Service</option>
+                                
+                                <option>🔍 Penetration Testing</option>
+                                <option>🖥️ Bug Hunting</option>
+                                <option>🟥 Red Teaming</option>
+                                <option>🌐 Network Security</option>
+                                <option>📚 Training & Mentorship</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="contact-message" class="block text-white font-semibold mb-2">Message</label>
+                            <textarea id="contact-message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-red-500 focus:outline-none transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-orange-500 py-3 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-blue-500/25 transition-all flex items-center justify-center space-x-2 transform hover:scale-102">
+                            <i class="fas fa-paper-plane w-5 h-5"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-orange-500 rounded-lg flex items-center justify-center">
+                            <img src="/home/mohamed/my port/kmc_20250810_181547.png" alt="Mostafa Algezawy Logo" class="w-6 h-6 text-white" /> <!-- Placeholder for 0.png -->
+                        </div>
+                        <span class="text-xl font-bold">Mohamed Hassan</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Junior Penetration Tester, Bug Hunter, Ethical Hacker and Network Security Guy.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>• Penetration Testing</li>
+                        <li>• Network Security</li>
+                        <li>• Red Teaming</li>
+                        <li>• Bug Hunting</li>
+                        <li>• About Ethical Hacking</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Connect With Me</h4>
+                    <div class="flex space-x-4">
+                        <!-- Social media icons with correct links -->
+                        <a href="https://www.linkedin.com/in/mohamed-hassan-3744a533a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md" title="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@HACK_WITHM0420" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md" title="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@mohamed_hassan0420?_r=1&_t=ZS-91JgpPOyePZ" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md" title="Mostaql">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://github.com/Moha420med" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md" title="Kafiil">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500">
+                    © 2025 Mohamed Hassan. All rights reserved. | Penetration Tester & Network Security Specialist
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal Structure -->
+    <div id="certificate-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[100] hidden">
+        <div class="bg-gray-900 rounded-lg shadow-xl max-w-4xl w-full mx-4 p-8 relative border border-gray-700">
+            <button id="close-certificate-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 id="modal-cert-title" class="text-3xl font-bold text-white mb-4"></h3>
+                    <p id="modal-cert-org" class="text-gray-400 mb-2"></p>
+                    <p id="modal-cert-level" class="text-gray-400 mb-2"></p>
+                    <p id="modal-cert-year" class="text-gray-400 mb-6"></p>
+                    <p class="text-gray-300 leading-relaxed">
+                        This certificate demonstrates my proficiency in the specified area, validating my skills and knowledge acquired through rigorous training and examination.
+                    </p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <img id="modal-cert-image" src="/home/mohamed/my port/WhatsApp Image 2025-11-11 at 6.32.56 PM (1).jpeg" alt="Certificate Image" class="max-w-full h-auto rounded-lg border border-gray-700 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript: Code responsible for interaction and animations -->
+    <script>
+        // Initialize AOS library for scroll animations
+        AOS.init({
+            duration: 1000,
+            once: true, // Play animations once
+            offset: 50, // Start animations a bit earlier
+        });
+
+        // Initialize GSAP and ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile Menu Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden'); // Show menu
+            setTimeout(() => {
+                mobileMenu.classList.add('active'); // Slide menu from right
+            }, 10); // Small delay to allow 'hidden' to be removed
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('active'); // Hide menu
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300); // Matches transition duration
+            document.body.style.overflow = 'auto'; // Allow scrolling
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Smooth Scrolling Logic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Terminal Typing Animation Logic
+        const terminalOutput = document.getElementById('terminal-output');
+        const terminalCommands = [
+            "$ whoami",
+            "Mohamed_Hassan",
+            "$ cat /etc/certificates",
+            "Cybersecurity: Red Teaming & Ethical Hacking diploma ✓",
+            "Pentesting: eJPT Certified,eJPTv2 Diploma ✓",
+            "Web Pentesting: Advanced Bug Bounty Secrets Diploma ✓",
+            "Network Security: CCNA 200-301 Certified ✓",
+            "$ commix --url=http://malicious.com/vuln.php?cmd=test --level=3",
+            "[+] Testing for OS command injection...",
+            "[+] Payload: cat/etc/passwd -Injection successfuly!",
+            "[+] Reverse shell established: nc -lnvp 4242",
+            "$ msfconsle -q -x use exploit/kali/webapp/cmd_inject",
+            "$ set PAYLOAD cmd/kali/reverse; run",
+            "[+] Injection exploit: Got root shell on targer!",
+            "$ sudo patch -p1 < secure-input.patch",
+            "● [sudo] App hardened - Injection blocked",
+            "   Active: active (running) ✓",
+            "$ echo 'Command Injection Pentest Complete!'",
+            "Ready for Web Exploits!",
+        ];
+        let commandIndex = 0;
+        let charIndex = 0;
+        let typingTimeout;
+
+        function typeTerminalCommand() {
+            if (commandIndex < terminalCommands.length) {
+                const currentCommand = terminalCommands[commandIndex];
+                if (charIndex < currentCommand.length) {
+                    terminalOutput.textContent += currentCommand.charAt(charIndex);
+                    charIndex++;
+                    typingTimeout = setTimeout(typeTerminalCommand, 50); // Typing speed
+                } else {
+                    terminalOutput.textContent += '\n'; // New line after each command
+                    commandIndex++;
+                    charIndex = 0;
+                    typingTimeout = setTimeout(typeTerminalCommand, 800); // Delay between commands
+                }
+            }
+            // The original code already handles restarting the animation when it finishes.
+            // No changes needed here for the automatic loop.
+            else {
+                // Restart after finishing
+                setTimeout(() => {
+                    terminalOutput.textContent = '';
+                    commandIndex = 0;
+                    charIndex = 0;
+                    typeTerminalCommand();
+                }, 3000); // Delay before restarting
+            }
+        }
+
+        // Start terminal typing when hero section is in view
+        gsap.to("#terminal-output", {
+            scrollTrigger: {
+                trigger: "#home",
+                start: "top center",
+                onEnter: () => typeTerminalCommand(),
+                onLeaveBack: () => {
+                    clearTimeout(typingTimeout);
+                    terminalOutput.textContent = '';
+                    commandIndex = 0;
+                    charIndex = 0;
+                },
+                once: true,
+            }
+        });
+
+        // Skill Progress Bar Animation Logic
+        const skillBars = document.querySelectorAll('.skill-progress-bar');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBar = entry.target;
+                    const width = skillBar.getAttribute('data-width');
+                    skillBar.style.transform = `scaleX(${width / 100})`;
+                    skillBar.classList.add('animate');
+                    skillObserver.unobserve(skillBar); // Stop observing after animation
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of element is visible
+
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+        // Animated Backgrounds Logic
+        const backgroundData = {
+            network: [
+                { icon: '<i class="fas fa-project-diagram"></i>', color: 'text-blue-500/10' },
+                { icon: '<i class="fas fa-globe"></i>', color: 'text-green-500/10' },
+                { icon: '<i class="fas fa-server"></i>', color: 'text-purple-500/10' },
+                { icon: '<i class="fas fa-wifi"></i>', color: 'text-cyan-500/10' },
+            ],
+            cyber: [
+                { icon: '<i class="fas fa-shield-alt"></i>', color: 'text-red-500/10' },
+                { icon: '<i class="fas fa-lock"></i>', color: 'text-orange-500/10' },
+                { icon: '<i class="fas fa-user-secret"></i>', color: 'text-yellow-500/10' },
+                { icon: '<i class="fas fa-bug"></i>', color: 'text-pink-500/10' },
+            ],
+            code: [
+                { icon: '<i class="fas fa-code"></i>', color: 'text-teal-500/10' },
+                { icon: '<i class="fas fa-terminal"></i>', color: 'text-green-500/10' },
+                { icon: '<i class="fas fa-database"></i>', color: 'text-blue-500/10' },
+                { icon: '<i class="fas fa-laptop-code"></i>', color: 'text-indigo-500/10' },
+            ]
+        };
+
+        function createBackgroundElements(container, type) {
+            const currentElements = backgroundData[type];
+            if (!currentElements) return;
+
+            for (let i = 0; i < 20; i++) { // 20 elements per background
+                const element = document.createElement('div');
+                element.className = `background-animated-element ${currentElements[i % currentElements.length].color} type-${type}`;
+                element.innerHTML = currentElements[i % currentElements.length].icon;
+                
+                // Set random position and icon size
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.top = `${Math.random() * 100}%`;
+                const size = 2 + Math.random() * 3; // Size between 2rem and 5rem
+                element.style.fontSize = `${size}rem`;
+                
+                // Set animation delay
+                element.style.animationDelay = `${Math.random() * 10}s`;
+
+                container.appendChild(element);
+            }
+        }
+
+        // Create backgrounds for each section
+        document.querySelectorAll('.background-animation-container').forEach(container => {
+            let type = 'network'; // Default type
+            if (container.classList.contains('type-cyber')) type = 'cyber';
+            else if (container.classList.contains('type-code')) type = 'code';
+            createBackgroundElements(container, type);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // After scrolling 50px
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Activate active section indicator in navbar
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        function updateActiveSection() {
+            let currentActive = 'home';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navbar.offsetHeight; // Section height minus navbar height
+                const sectionBottom = sectionTop + section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentActive = section.id;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('relative');
+                let existingIndicator = link.querySelector('.nav-indicator');
+                if (existingIndicator) {
+                    existingIndicator.remove();
+                }
+                
+                if (link.getAttribute('data-section') === currentActive) {
+                    link.classList.add('relative');
+                    const indicator = document.createElement('div');
+                    indicator.className = 'nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-blue-500';
+                    link.appendChild(indicator);
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+        updateActiveSection(); // Call on initial load
+
+        // Certificate Modal Logic
+        const certificateModal = document.getElementById('certificate-modal');
+        const closeCertificateModalButton = document.getElementById('close-certificate-modal');
+        const modalCertTitle = document.getElementById('modal-cert-title');
+        const modalCertOrg = document.getElementById('modal-cert-org');
+        const modalCertLevel = document.getElementById('modal-cert-level');
+        const modalCertYear = document.getElementById('modal-cert-year');
+        const modalCertImage = document.getElementById('modal-cert-image');
+
+        document.querySelectorAll('.view-certificate-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const title = this.getAttribute('data-title');
+                const org = this.getAttribute('data-org');
+                const level = this.getAttribute('data-level');
+                const year = this.getAttribute('data-year');
+                const imageUrl = this.getAttribute('data-image');
+
+                modalCertTitle.textContent = title;
+                modalCertOrg.textContent = org;
+                modalCertLevel.textContent = `Level: ${level}`;
+                modalCertYear.textContent = `Year: ${year}`;
+                modalCertImage.src = imageUrl || '/placeholder.svg?height=400&width=600'; // Fallback placeholder
+
+                certificateModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeCertificateModalButton.addEventListener('click', () => {
+            certificateModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        certificateModal.addEventListener('click', (e) => {
+            if (e.target === certificateModal) {
+                certificateModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
